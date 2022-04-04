@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #toolsScrollSection {
+        font-family: Poppins;
+        position: relative;
+        align-items: center;
+        top: -70px;
+        height: 300px;
+        margin-bottom: 80px;
+      }
+
+      #toolsScrollSection div ul {
+        list-style: none;
+      }
+
+      #toolsScrollSection div ul li {
+        padding: 40px 20px 40px 0px;
+        font-size: 110px;
+        letter-spacing: -1px;
+        font-weight: 700;
+        display: block;
+        white-space: nowrap;
+        margin-right: 50px;
+      }
+
+      .tollScrollLeft ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: hidden;
+        color: #000;
+      }
+
+      .tollScrollRight ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        overflow: hidden;
+        color: #0054b2;
+      }
+
+      .tollScrollLeft ul li {
+        text-shadow: 0px 10px 0px rgba(0, 0, 0, 0.15);
+      }
+
+      .tollScrollRight ul li {
+        text-shadow: 0px 10px 0px rgba(0, 0, 0, 0.15);
+      }
+
+      .tollScrollLeft {
+        position: absolute;
+        left: -1200px;
+        transform: rotate(2deg);
+        top: 200px;
+        transform-origin: center;
+      }
+
+      .tollScrollRight {
+        position: absolute;
+        right: -1200px;
+        top: 100px;
+        transform: rotate(-2deg);
+        transform-origin: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <section id="toolsScrollSection">
+      <div class="tollScrollLeft">
+        <ul>
+          <li>HTML Compress</li>
+          <li>Js Minify</li>
+          <li>Image WebP Convertor</li>
+          <li>Web Font</li>
+          <li>Image Details Finder</li>
+        </ul>
+      </div>
+      <div class="tollScrollRight">
+        <ul>
+          <li>Extrat meta details</li>
+          <li>Youtube video tags extractor</li>
+          <li>HEX to RGB</li>
+          <li>Multi Device Simulator</li>
+          <li>URL UTM Builder</li>
+        </ul>
+      </div>
+    </section>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eos
+      debitis eveniet fugiat quaerat accusamus!
+    </p>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      var yMousePos = 0;
+      var lastScrolledTop = 0;
+
+      jQuery(document).mousemove(function (event) {
+        captureMousePos(event.pageX);
+      });
+
+      function captureMousePos(event) {
+        // console.log(event);
+      }
+
+      jQuery(window).scroll(function (event) {
+        event.preventDefault;
+
+        if (lastScrolledTop != $(document).scrollTop()) {
+          yMousePos -= lastScrolledTop;
+          lastScrolledTop = $(document).scrollTop();
+          yMousePos += lastScrolledTop;
+
+          // console.log(yMousePos);
+
+          var rightScroll = "+" + yMousePos - 1800 + "px";
+          var rightScrollOne = "+" + yMousePos - 6000 + "px";
+          jQuery(".tollScrollRight").css({ right: rightScroll });
+          jQuery(".tollScrollLeft").css({ left: rightScroll });
+
+          jQuery(".arrowBgScroll").css({ left: rightScrollOne });
+        }
+      });
+    </script>
+  </body>
+</html>

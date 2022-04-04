@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .scroller {
+        height: 1.2em;
+        line-height: 1.2em;
+        position: relative;
+        overflow: hidden;
+        width: 10em;
+      }
+      .scroller > span {
+        position: absolute;
+        top: 0;
+        animation: slide 5s infinite;
+        font-weight: bold;
+      }
+      @keyframes slide {
+        0% {
+          top: 0;
+        }
+        25% {
+          top: -1.2em;
+        }
+        50% {
+          top: -2.4em;
+        }
+        75% {
+          top: -3.6em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      ApgyTools
+      <!-- Scroller Start -->
+
+      <div class="scroller">
+        <span>
+          Fun<br />
+          Usefull<br />
+          Amazing<br />
+          Time Saving
+        </span>
+      </div>
+
+      <!-- Scroller End -->
+    </h1>
+  </body>
+</html>
